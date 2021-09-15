@@ -1,5 +1,13 @@
-<div class="center jumbotron">
-  <div class="text-center">
-    <h1>Pokémon UNITE Club</h1>
-  </div>
+<div class="text-center mb-5">
+  <% if @pokemon %>
+    <% if login? %>
+      <p><%= link_to @pokemon.name, pokemon_path(@pokemon), class: 'font-weight-bold h4' %></p>
+    <% else %>
+      <p class="font-weight-bold h4"><%= @pokemon.name %></p>
+    <% end %>
+    <p class="mt-5">
+      <img class="rounded mx-auto" src=<%= "/pokemons/#{@pokemon.image}" %> alt="Pokemon" width="160px" height="160px">
+    </p>
+  <% end %>
+  <p class="mt-5"><%= link_to 'キャラクターランダム生成', '/pokemons/random', method: :post, class: 'btn btn-lg btn-primary' %></p>
 </div>
