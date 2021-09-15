@@ -1,2 +1,22 @@
-<h1>Pokemons#show</h1>
-<p>Find me in app/views/pokemons/show.html.erb</p>
+<div class="text-center mb-5">
+  <h1 class="h4 font-weight-bold"><%= @pokemon.name %></h1>
+  <p class="mt-5">
+    <img class="rounded" src=<%= "/pokemons/#{@pokemon.image}" %> alt="Pokemon" width="160px" height="160px">
+  </p>
+  <div class="row mt-5">
+    <table class="offset-lg-3 col-lg-6 table table-bordered">
+      <tr>
+        <th>攻撃タイプ</th>
+        <td><%= @pokemon.attack_type %></td>
+      </tr>
+      <tr>
+        <th>役割</th>
+        <td><%= @pokemon.role %></td>
+      </tr>
+      <tr>
+        <th>攻撃／特攻</th>
+        <td><%= @pokemon.attack_category %></td>
+      </tr>
+    </table>
+  </div>
+</div>
