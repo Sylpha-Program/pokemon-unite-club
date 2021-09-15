@@ -1,7 +1,25 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+Pokemon.create(name: 'フシギバナ', image: 'venusaur.png', attack_type: 1, role: 0, attack_category: 1)
+Pokemon.create(name: 'リザードン', image: 'charizard.png', attack_type: 0, role: 3, attack_category: 0)
+Pokemon.create(name: 'カメックス', image: 'blastoise.png', attack_type: 1, role: 1, attack_category: 1)
+Pokemon.create(name: 'ピカチュウ', image: 'pikachu.png', attack_type: 1, role: 0, attack_category: 1)
+Pokemon.create(name: 'アローラキュウコン', image: 'alolan-ninetales.png', attack_type: 1, role: 0, attack_category: 1)
+Pokemon.create(name: 'プクリン', image: 'wigglytuff.png', attack_type: 0, role: 4, attack_category: 1)
+Pokemon.create(name: 'カイリキー', image: 'machamp.png', attack_type: 0, role: 3, attack_category: 0)
+Pokemon.create(name: 'ヤドラン', image: 'slowbro.png', attack_type: 1, role: 1, attack_category: 1)
+Pokemon.create(name: 'ゲンガー', image: 'gengar.png', attack_type: 0, role: 2, attack_category: 1)
+Pokemon.create(name: 'バリヤード', image: 'mr-mime.png', attack_type: 0, role: 4, attack_category: 1)
+Pokemon.create(name: 'カビゴン', image: 'snorlax.png', attack_type: 0, role: 1, attack_category: 0)
+Pokemon.create(name: 'ハピナス', image: 'blissey.png', attack_type: 0, role: 4, attack_category: 1)
+Pokemon.create(name: 'サーナイト', image: 'gardevoir.png', attack_type: 1, role: 0, attack_category: 1)
+Pokemon.create(name: 'アブソル', image: 'absol.png', attack_type: 0, role: 2, attack_category: 0)
+Pokemon.create(name: 'ガブリアス', image: 'garchomp.png', attack_type: 0, role: 3, attack_category: 0)
+Pokemon.create(name: 'ルカリオ', image: 'lucario.png', attack_type: 0, role: 3, attack_category: 0)
+Pokemon.create(name: 'イワパレス', image: 'crustle.png', attack_type: 0, role: 1, attack_category: 0)
+Pokemon.create(name: 'ゲッコウガ', image: 'greninja.png', attack_type: 1, role: 0, attack_category: 0)
+Pokemon.create(name: 'ファイアロー', image: 'talonflame.png', attack_type: 0, role: 2, attack_category: 0)
+Pokemon.create(name: 'ゼラオラ', image: 'zeraora.png', attack_type: 0, role: 2, attack_category: 0)
+Pokemon.create(name: 'エースバーン', image: 'cinderace.png', attack_type: 1, role: 0, attack_category: 0)
+Pokemon.create(name: 'ワタシラガ', image: 'eldegoss.png', attack_type: 1, role: 4, attack_category: 1)
+Pokemon.create(name: 'ウッウ', image: 'cramorant.png', attack_type: 1, role: 0, attack_category: 1)
+
+User.create(name: 'Sylpha', email: 'sylpha.games@gmail.com', password: 'sayumi729864')
