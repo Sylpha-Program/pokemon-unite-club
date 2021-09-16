@@ -1,2 +1,6 @@
-<h1>Stages#show</h1>
-<p>Find me in app/views/stages/show.html.erb</p>
+<div class="text-center mb-5">
+  <h1 class="h4 font-weight-bold"><%= @stage.name %></h1>
+  <p class="mt-5">
+    <img class="rounded" src=<%= "/stages/#{@stage.image}" %> alt="Stage" width="400px" height="200px">
+  </p>
+</div>
