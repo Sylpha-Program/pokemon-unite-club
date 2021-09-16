@@ -6,7 +6,7 @@
         <p>
           <img class="rounded" src=<%= "/battle_items/#{battle_item.image}" %> alt="Battle Item" width="100px" height="100px">
         </p>
-        <p><%= link_to battle_item.name, battle_item_path(battle_item), class: 'font-weight-bold h4' %></p>
+        <p class="font-weight-bold h4"><%= battle_item.name %></p>
       </div>
     <% end %>
   </div>

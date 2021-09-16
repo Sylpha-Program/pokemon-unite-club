@@ -14,6 +14,8 @@ Rails.application.routes.draw do
 
   resources :stages, only: [:index, :show]
 
-  resources :battle_items, only: [:index, :show]
+  resources :battle_items, only: [:index]
+
+  resources :tools, only: [:index]
   
 end

@@ -4,7 +4,4 @@ class BattleItemsController < ApplicationController
     @battle_items = BattleItem.order(id: :asc)
   end
 
-  def show
-  end
-
 end
