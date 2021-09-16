@@ -11,5 +11,7 @@ Rails.application.routes.draw do
 
   post 'pokemons/random', to: 'pokemons#random'
   resources :pokemons, only: [:index, :show]
+
+  resources :stages, only: [:index, :show]
   
 end

@@ -22,4 +22,9 @@ Pokemon.create(name: 'エースバーン', image: 'cinderace.png', attack_type: 
 Pokemon.create(name: 'ワタシラガ', image: 'eldegoss.png', attack_type: 1, role: 4, attack_category: 1)
 Pokemon.create(name: 'ウッウ', image: 'cramorant.png', attack_type: 1, role: 0, attack_category: 1)
 
+Stage.create(name: 'レモータスタジアム', image: 'remoat_stadium.jpg')
+Stage.create(name: 'ジーヴルシティ', image: 'shivre_city.jpg')
+Stage.create(name: 'マールスタジアム', image: 'mer_stadium.jpg')
+Stage.create(name: 'ゼフィオパーク', image: 'auroma_park.jpg')
+
 User.create(name: 'Sylpha', email: 'sylpha.games@gmail.com', password: 'sayumi729864')
