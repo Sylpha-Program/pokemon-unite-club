@@ -27,4 +27,13 @@ Stage.create(name: 'ジーヴルシティ', image: 'shivre_city.jpg')
 Stage.create(name: 'マールスタジアム', image: 'mer_stadium.jpg')
 Stage.create(name: 'ゼフィオパーク', image: 'auroma_park.jpg')
 
+BattleItem.create(name: 'キズぐすり', image: 'battle_item_1.png')
+BattleItem.create(name: 'プラスパワー', image: 'battle_item_2.png')
+BattleItem.create(name: 'スピーダー', image: 'battle_item_3.png')
+BattleItem.create(name: 'エネコのしっぽ', image: 'battle_item_4.png')
+BattleItem.create(name: 'だっしゅつボタン', image: 'battle_item_5.png')
+BattleItem.create(name: 'どんそくスモーク', image: 'battle_item_6.png')
+BattleItem.create(name: 'なんでもなおし', image: 'battle_item_7.png')
+BattleItem.create(name: 'ゴールかそくそうち', image: 'battle_item_8.png')
+
 User.create(name: 'Sylpha', email: 'sylpha.games@gmail.com', password: 'sayumi729864')

@@ -9,7 +9,7 @@
         <% if login? %>
           <li class="nav-item"><%= link_to 'ポケモン', pokemons_path, class: 'nav-link' %></li>
           <li class="nav-item"><%= link_to 'ステージ', stages_path, class: 'nav-link' %></li>
-          <li class="nav-item"><a href="#" class="nav-link">バトルアイテム</a></li>
+          <li class="nav-item"><%= link_to 'バトルアイテム', battle_items_path, class: 'nav-link' %></li>
           <li class="nav-item"><a href="#" class="nav-link">もちもの</a></li>
           <li class="nav-item"><a href="#" class="nav-link">マイセット</a></li>
           <li class="nav-item"><%= link_to current_user.name, user_path(current_user), class: 'nav-link' %></li>

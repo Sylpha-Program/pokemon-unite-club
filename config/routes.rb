@@ -13,5 +13,7 @@ Rails.application.routes.draw do
   resources :pokemons, only: [:index, :show]
 
   resources :stages, only: [:index, :show]
+
+  resources :battle_items, only: [:index, :show]
   
 end

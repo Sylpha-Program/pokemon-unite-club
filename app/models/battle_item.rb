@@ -1,0 +1,2 @@
+class BattleItem < ApplicationRecord
+end

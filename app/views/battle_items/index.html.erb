@@ -1,0 +1,13 @@
+<div class="text-center mb-5">
+  <h1>バトルアイテム一覧</h1>
+  <div class="row mt-5">
+    <% @battle_items.each do |battle_item| %>
+      <div class="col-xl-3 col-lg-4 col-md-6 border pt-5 pb-3">
+        <p>
+          <img class="rounded" src=<%= "/battle_items/#{battle_item.image}" %> alt="Battle Item" width="100px" height="100px">
+        </p>
+        <p><%= link_to battle_item.name, battle_item_path(battle_item), class: 'font-weight-bold h4' %></p>
+      </div>
+    <% end %>
+  </div>
+</div>
