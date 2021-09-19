@@ -7,6 +7,9 @@
           <img class="rounded" src=<%= "/pokemons/#{pokemon.image}" %> alt="Pokemon" width="160px" height="160px">
         </p>
         <p><%= link_to pokemon.name, pokemon_path(pokemon), class: 'font-weight-bold h4' %></p>
+        <% if login? %>
+          <p class="font-weight-bold h4 mb-3">Lv.<%= Math.sqrt((Score.where(user_id: session[:user_id], pokemon_id: pokemon.id).sum(:total_point)) / 10).floor %></p>
+        <% end %>
       </div>
     <% end %>
   </div>

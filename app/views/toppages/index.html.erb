@@ -5,6 +5,7 @@
     </p>
     <% if login? %>
       <p><%= link_to @pokemon.name, pokemon_path(@pokemon), class: 'font-weight-bold h4' %></p>
+      <p class="font-weight-bold h4 mb-3">Lv.<%= @level %></p>
     <% else %>
       <p class="font-weight-bold h4"><%= @pokemon.name %></p>
     <% end %>
@@ -52,4 +53,9 @@
     <% end %>
   <% end %>
   <p class="mt-5"><%= link_to 'ポケモンランダム生成', '/pokemons/random', method: :post, class: 'btn btn-lg btn-primary' %></p>
+  <% if login? %>
+    <% if @pokemon %>
+      <p class="mt-5"><%= link_to 'ポイント登録', "/pokemons/#{@pokemon.id}/score", class: 'btn btn-lg btn-primary' %></p>
+    <% end %>
+  <% end %>
 </div>

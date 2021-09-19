@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   delete 'logout', to: 'sessions#destroy'
 
   post 'pokemons/random', to: 'pokemons#random'
+  get 'pokemons/:id/score', to: 'pokemons#score_edit'
+  post 'pokemons/:id/score', to: 'pokemons#score_update'
   resources :pokemons, only: [:index, :show]
 
   resources :stages, only: [:index, :show]

@@ -148,6 +148,12 @@ Skill.create(pokemon_id: 23, button: 1, name: 'エアスラッシュ', image: 'c
 
 User.create(name: 'Sylpha', email: 'sylpha.games@gmail.com', password: 'sayumi729864')
 
+Pokemon.order(id: :asc).each do |pokemon|
+  Stage.order(id: :asc).each do |stage|
+    Score.create(user_id: 1, pokemon_id: pokemon.id, stage_id: stage.id)
+  end
+end
+
 MySet.create(user_id: 1, pokemon_id: 1, r_skill_id: 1, zr_skill_id: 3, battle_item_id: 5, tool_1_id: 4, tool_2_id: 5, tool_3_id: 6)
 MySet.create(user_id: 1, pokemon_id: 2, r_skill_id: 5, zr_skill_id: 8, battle_item_id: 5, tool_1_id: 1, tool_2_id: 2, tool_3_id: 3)
 MySet.create(user_id: 1, pokemon_id: 3, r_skill_id: 10, zr_skill_id: 12, battle_item_id: 5, tool_1_id: 6, tool_2_id: 7, tool_3_id: 8)

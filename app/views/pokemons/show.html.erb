@@ -1,8 +1,54 @@
 <div class="text-center mb-5">
-  <h1 class="h4 font-weight-bold"><%= @pokemon.name %></h1>
-  <p class="mt-5">
+  <p>
     <img class="rounded" src=<%= "/pokemons/#{@pokemon.image}" %> alt="Pokemon" width="160px" height="160px">
   </p>
+  <h1 class="h4 font-weight-bold"><%= @pokemon.name %></h1>
+  <% if login? %>
+    <p class="font-weight-bold h4 mb-3">Lv.<%= @level %></p>
+  <% end %>
+  <% if @my_set %>
+    <p>
+      <% if @my_set.r_skill_id %>
+        <img class="rounded mr-1" src=<%= "/skills/#{@my_set.r_skill.image}" %> alt="Skill" width="40px" height="40px">
+        <span class="font-weight-bold"><%= @my_set.r_skill.name %></span>
+      <% else %>
+        <img class="rounded mr-1" src=<%= "/unselected.png" %> alt="Skill" width="40px" height="40px">
+        <span class="font-weight-bold">未選択</span>
+      <% end %>
+    </p>
+    <p>
+      <% if @my_set.zr_skill_id %>
+        <img class="rounded mr-1" src=<%= "/skills/#{@my_set.zr_skill.image}" %> alt="Skill" width="40px" height="40px">
+        <span class="font-weight-bold"><%= @my_set.zr_skill.name %></span>
+      <% else %>
+        <img class="rounded mr-1" src=<%= "/unselected.png" %> alt="Skill" width="40px" height="40px">
+        <span class="font-weight-bold">未選択</span>
+      <% end %>
+    </p>
+    <p>
+      <% if @my_set.battle_item_id %>
+        <img class="rounded mr-1" src=<%= "/battle_items/#{@my_set.battle_item.image}" %> alt="Battle Item" width="40px" height="40px">
+      <% else %>
+        <img class="rounded mr-1" src=<%= "/unselected.png" %> alt="Battle Item" width="40px" height="40px">
+      <% end %>
+      <% if @my_set.tool_1_id %>
+        <img class="rounded mr-1" src=<%= "/tools/#{@my_set.tool_1.image}" %> alt="Tool" width="40px" height="40px">
+      <% else %>
+        <img class="rounded mr-1" src=<%= "/unselected.png" %> alt="Tool" width="40px" height="40px">
+      <% end %>
+      <% if @my_set.tool_2_id %>
+        <img class="rounded mr-1" src=<%= "/tools/#{@my_set.tool_2.image}" %> alt="Tool" width="40px" height="40px">
+      <% else %>
+        <img class="rounded mr-1" src=<%= "/unselected.png" %> alt="Tool" width="40px" height="40px">
+      <% end %>
+      <% if @my_set.tool_3_id %>
+        <img class="rounded mr-1" src=<%= "/tools/#{@my_set.tool_3.image}" %> alt="Tool" width="40px" height="40px">
+      <% else %>
+        <img class="rounded mr-1" src=<%= "/unselected.png" %> alt="Tool" width="40px" height="40px">
+      <% end %>
+    </p>
+  <% end %>
+  <p class="mt-5"><%= link_to 'ポイント登録', "/pokemons/#{@pokemon.id}/score", class: 'btn btn-lg btn-primary' %></p>
   <div class="row mt-5">
     <table class="offset-lg-3 col-lg-6 offset-md-2 col-md-8 table table-bordered">
       <tr>
@@ -62,5 +108,19 @@
         </div>
       <% end %>
     </div>
+    <table class="offset-lg-3 col-lg-6 table table-bordered mt-5">
+      <tr>
+        <th>ステージ名</th>
+        <th>合計ポイント</th>
+        <th>最高ポイント</th>
+      </tr>
+      <% @scores.each do |score| %>
+        <tr>
+          <th><%= score.stage.name %></th>
+          <td><%= score.total_point %></td>
+          <td><%= score.max_point %></td>
+        </tr>
+      <% end %>
+    </table>
   </div>
 </div>
