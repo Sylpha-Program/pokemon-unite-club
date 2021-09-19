@@ -17,5 +17,7 @@ Rails.application.routes.draw do
   resources :battle_items, only: [:index]
 
   resources :tools, only: [:index]
+
+  resources :my_sets, only: [:index, :edit, :update]
   
 end
