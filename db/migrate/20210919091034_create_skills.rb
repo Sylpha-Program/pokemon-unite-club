@@ -7,7 +7,7 @@ class CreateSkills < ActiveRecord::Migration[5.2]
       t.string :image
       t.integer :attack_category
       t.integer :level
-      t.integer :cool_time
+      t.float :cool_time
       t.string :attack_type
       t.timestamps
     end
