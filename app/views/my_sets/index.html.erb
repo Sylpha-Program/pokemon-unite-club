@@ -6,7 +6,7 @@
         <p>
           <img class="rounded" src=<%= "/pokemons/#{my_set.pokemon.image}" %> alt="Pokemon" width="160px" height="160px">
         </p>
-        <p><%= link_to my_set.pokemon.name, pokemon_path(my_set.pokemon), class: 'font-weight-bold h4' %></p>
+        <p><%= link_to my_set.pokemon.name, edit_my_set_path(my_set.pokemon), class: 'font-weight-bold h4' %></p>
         <p>
           <% if my_set.r_skill_id %>
             <img class="rounded mr-1" src=<%= "/skills/#{my_set.r_skill.image}" %> alt="Skill" width="40px" height="40px">

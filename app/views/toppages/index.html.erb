@@ -1,13 +1,55 @@
 <div class="text-center mb-5">
   <% if @pokemon %>
+    <p>
+      <img class="rounded mx-auto" src=<%= "/pokemons/#{@pokemon.image}" %> alt="Pokemon" width="160px" height="160px">
+    </p>
     <% if login? %>
       <p><%= link_to @pokemon.name, pokemon_path(@pokemon), class: 'font-weight-bold h4' %></p>
     <% else %>
       <p class="font-weight-bold h4"><%= @pokemon.name %></p>
     <% end %>
-    <p class="mt-5">
-      <img class="rounded mx-auto" src=<%= "/pokemons/#{@pokemon.image}" %> alt="Pokemon" width="160px" height="160px">
-    </p>
+    <% if @my_set %>
+      <p>
+        <% if @my_set.r_skill_id %>
+          <img class="rounded mr-1" src=<%= "/skills/#{@my_set.r_skill.image}" %> alt="Skill" width="40px" height="40px">
+          <span class="font-weight-bold"><%= @my_set.r_skill.name %></span>
+        <% else %>
+          <img class="rounded mr-1" src=<%= "/unselected.png" %> alt="Skill" width="40px" height="40px">
+          <span class="font-weight-bold">未選択</span>
+        <% end %>
+      </p>
+      <p>
+        <% if @my_set.zr_skill_id %>
+          <img class="rounded mr-1" src=<%= "/skills/#{@my_set.zr_skill.image}" %> alt="Skill" width="40px" height="40px">
+          <span class="font-weight-bold"><%= @my_set.zr_skill.name %></span>
+        <% else %>
+          <img class="rounded mr-1" src=<%= "/unselected.png" %> alt="Skill" width="40px" height="40px">
+          <span class="font-weight-bold">未選択</span>
+        <% end %>
+      </p>
+      <p>
+        <% if @my_set.battle_item_id %>
+          <img class="rounded mr-1" src=<%= "/battle_items/#{@my_set.battle_item.image}" %> alt="Battle Item" width="40px" height="40px">
+        <% else %>
+          <img class="rounded mr-1" src=<%= "/unselected.png" %> alt="Battle Item" width="40px" height="40px">
+        <% end %>
+        <% if @my_set.tool_1_id %>
+          <img class="rounded mr-1" src=<%= "/tools/#{@my_set.tool_1.image}" %> alt="Tool" width="40px" height="40px">
+        <% else %>
+          <img class="rounded mr-1" src=<%= "/unselected.png" %> alt="Tool" width="40px" height="40px">
+        <% end %>
+        <% if @my_set.tool_2_id %>
+          <img class="rounded mr-1" src=<%= "/tools/#{@my_set.tool_2.image}" %> alt="Tool" width="40px" height="40px">
+        <% else %>
+          <img class="rounded mr-1" src=<%= "/unselected.png" %> alt="Tool" width="40px" height="40px">
+        <% end %>
+        <% if @my_set.tool_3_id %>
+          <img class="rounded mr-1" src=<%= "/tools/#{@my_set.tool_3.image}" %> alt="Tool" width="40px" height="40px">
+        <% else %>
+          <img class="rounded mr-1" src=<%= "/unselected.png" %> alt="Tool" width="40px" height="40px">
+        <% end %>
+      </p>
+    <% end %>
   <% end %>
   <p class="mt-5"><%= link_to 'ポケモンランダム生成', '/pokemons/random', method: :post, class: 'btn btn-lg btn-primary' %></p>
 </div>

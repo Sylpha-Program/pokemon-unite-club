@@ -1,2 +1,38 @@
-<h1>MySets#edit</h1>
-<p>Find me in app/views/my_sets/edit.html.erb</p>
+<div class="text-center">
+  <h1 class="h4 font-weight-bold"><%= @my_set.pokemon.name %></h1>
+  <p class="mt-5">
+    <img class="rounded" src=<%= "/pokemons/#{@my_set.pokemon.image}" %> alt="Pokemon" width="160px" height="160px">
+  </p>
+</div>
+<div class="row my-5">
+  <div class="offset-sm-3 col-sm-6">
+    <%= form_with(model: @my_set, local: true) do |f| %>
+      <%= render 'layouts/error_messages', model: f.object %>
+      <div class="form-group">
+        <%= f.label :r_skill, 'Rスキル' %>
+        <%= f.collection_select :r_skill_id, @r_skills, :id, :name, {value: @my_set.r_skill}, class: 'form-control' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :zr_skill, 'ZRスキル' %>
+        <%= f.collection_select :zr_skill_id, @zr_skills, :id, :name, {value: @my_set.zr_skill}, class: 'form-control' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :battle_item, 'バトルアイテム' %>
+        <%= f.collection_select :battle_item_id, @battle_items, :id, :name, {value: @my_set.battle_item}, class: 'form-control' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :tool_1, 'もちもの①' %>
+        <%= f.collection_select :tool_1_id, @tools, :id, :name, {value: @my_set.tool_1}, class: 'form-control' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :tool_2, 'もちもの②' %>
+        <%= f.collection_select :tool_2_id, @tools, :id, :name, {value: @my_set.tool_2}, class: 'form-control' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :tool_3, 'もちもの③' %>
+        <%= f.collection_select :tool_3_id, @tools, :id, :name, {value: @my_set.tool_3}, class: 'form-control' %>
+      </div>
+      <%= f.submit '更新する', class: 'btn btn-primary btn-block mt-5' %>
+    <% end %>
+  </div>
+</div>
