@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_16_062240) do
+ActiveRecord::Schema.define(version: 2021_09_18_014814) do
 
   create_table "battle_items", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
@@ -27,6 +27,20 @@ ActiveRecord::Schema.define(version: 2021_09_16_062240) do
     t.integer "attack_category"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "skills", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "pokemon_id"
+    t.integer "button"
+    t.string "name"
+    t.string "image"
+    t.integer "attack_category"
+    t.integer "level"
+    t.integer "cool_time"
+    t.string "attack_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["pokemon_id"], name: "index_skills_on_pokemon_id"
   end
 
   create_table "stages", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -51,4 +65,5 @@ ActiveRecord::Schema.define(version: 2021_09_16_062240) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "skills", "pokemons"
 end

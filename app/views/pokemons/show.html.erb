@@ -4,7 +4,7 @@
     <img class="rounded" src=<%= "/pokemons/#{@pokemon.image}" %> alt="Pokemon" width="160px" height="160px">
   </p>
   <div class="row mt-5">
-    <table class="offset-lg-3 col-lg-6 table table-bordered">
+    <table class="offset-lg-3 col-lg-6 offset-md-2 col-md-8 table table-bordered">
       <tr>
         <th>攻撃タイプ</th>
         <td><%= @pokemon.attack_type %></td>
@@ -18,5 +18,49 @@
         <td><%= @pokemon.attack_category %></td>
       </tr>
     </table>
+    <div class="offset-lg-3 col-lg-6 offset-md-2 col-md-8">
+      <p class="h4 font-weight-bold mt-5">Rスキル（Lv.<%= @r_skill.level %>で習得）</p>
+      <% @r_skills.each do |r_skill| %>
+        <div class="mt-5">
+          <img class="rounded mr-3" src=<%= "/skills/#{r_skill.image}" %> alt="Skill" width="80px" height="80px">
+          <span class="h5 font-weight-bold"><%= r_skill.name %></span>
+          <table class="offset-lg-2 col-lg-8 offset-md-1 col-md-10 table table-bordered mt-3">
+            <tr>
+              <th>待ち時間</th>
+              <td><%= r_skill.cool_time %>秒</td>
+            </tr>
+            <tr>
+              <th>分類</th>
+              <td><%= r_skill.attack_category %></td>
+            </tr>
+            <tr>
+              <th>タイプ</th>
+              <td><%= r_skill.attack_type %></td>
+            </tr>
+          </table>
+        </div>
+      <% end %>
+      <p class="h4 font-weight-bold mt-5">ZRスキル（Lv.<%= @zr_skill.level %>で習得）</p>
+      <% @zr_skills.each do |zr_skill| %>
+        <div class="mt-5">
+          <img class="rounded mr-3" src=<%= "/skills/#{zr_skill.image}" %> alt="Skill" width="80px" height="80px">
+          <span class="h5 font-weight-bold"><%= zr_skill.name %></span>
+          <table class="offset-lg-2 col-lg-8 offset-md-1 col-md-10 table table-bordered mt-3">
+            <tr>
+              <th>待ち時間</th>
+              <td><%= zr_skill.cool_time %>秒</td>
+            </tr>
+            <tr>
+              <th>分類</th>
+              <td><%= zr_skill.attack_category %></td>
+            </tr>
+            <tr>
+              <th>タイプ</th>
+              <td><%= zr_skill.attack_type %></td>
+            </tr>
+          </table>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>
