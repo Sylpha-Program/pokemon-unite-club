@@ -46,4 +46,20 @@ class PokemonsController < ApplicationController
     redirect_to root_url
   end
 
+  def skill_edit
+    @pokemon = Pokemon.find(params[:id])
+    @skills = Skill.where(pokemon_id: params[:id])
+  end
+
+  def skill_update
+    @skill = Skill.find_by(id: params[:skill_id])
+    if @skill.update(cool_time: params[:cool_time], attack_type: params[:attack_type])
+      flash[:success] = '更新しました。'
+      redirect_to root_url
+    else
+      flash.now[:danger] = '更新に失敗しました。'
+      render :skill_edit
+    end
+  end
+
 end

@@ -115,7 +115,7 @@ Skill.create(pokemon_id: 15, button: 1, name: 'じしん', image: 'garchomp_skil
 Skill.create(pokemon_id: 15, button: 1, name: 'ドラゴンクロー', image: 'garchomp_skill_4.png', attack_category: 0, level: 8, cool_time: 5, attack_type: '近接')
 Skill.create(pokemon_id: 16, button: 0, name: 'しんそく', image: 'lucario_skill_1.png', attack_category: 0, level: 5, cool_time: 9, attack_type: 'ムーブ')
 Skill.create(pokemon_id: 16, button: 0, name: 'グロウパンチ', image: 'lucario_skill_2.png', attack_category: 0, level: 5, cool_time: 7, attack_type: 'ムーブ')
-Skill.create(pokemon_id: 16, button: 1, name: 'ボーンラッシュ', image: 'lucario_skill_3.png', attack_category: 0, level: 7, cool_time: 10, attack_type: '近接&ムーブ')
+Skill.create(pokemon_id: 16, button: 1, name: 'ボーンラッシュ', image: 'lucario_skill_3.png', attack_category: 0, level: 7, cool_time: 10, attack_type: '近接')
 Skill.create(pokemon_id: 16, button: 1, name: 'インファイト', image: 'lucario_skill_4.png', attack_category: 0, level: 7, cool_time: 9, attack_type: '近接')
 Skill.create(pokemon_id: 17, button: 0, name: 'がんせきふうじ', image: 'crustle_skill_1.png', attack_category: 0, level: 4, cool_time: 5, attack_type: '範囲')
 Skill.create(pokemon_id: 17, button: 0, name: 'からをやぶる', image: 'crustle_skill_2.png', attack_category: 2, level: 4, cool_time: 7, attack_type: '能力上昇')
