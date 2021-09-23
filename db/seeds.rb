@@ -177,6 +177,6 @@ MySet.create(user_id: 1, pokemon_id: 17, r_skill_id: 66, zr_skill_id: 67, battle
 MySet.create(user_id: 1, pokemon_id: 18, r_skill_id: 69, zr_skill_id: 71, battle_item_id: 5, tool_1_id: 6, tool_2_id: 7, tool_3_id: 2)
 MySet.create(user_id: 1, pokemon_id: 19, r_skill_id: 73, zr_skill_id: 75, battle_item_id: 5, tool_1_id: 6, tool_2_id: 7, tool_3_id: 2)
 MySet.create(user_id: 1, pokemon_id: 20, r_skill_id: 78, zr_skill_id: 79, battle_item_id: 5, tool_1_id: 6, tool_2_id: 7, tool_3_id: 2)
-MySet.create(user_id: 1, pokemon_id: 21, r_skill_id: 82, zr_skill_id: 83, battle_item_id: 5, tool_1_id: 6, tool_2_id: 7, tool_3_id: 2)
+MySet.create(user_id: 1, pokemon_id: 21, r_skill_id: 82, zr_skill_id: 84, battle_item_id: 5, tool_1_id: 6, tool_2_id: 7, tool_3_id: 2)
 MySet.create(user_id: 1, pokemon_id: 22, r_skill_id: 86, zr_skill_id: 87, battle_item_id: 5, tool_1_id: 6, tool_2_id: 7, tool_3_id: 12)
 MySet.create(user_id: 1, pokemon_id: 23, r_skill_id: 89, zr_skill_id: 91, battle_item_id: 5, tool_1_id: 4, tool_2_id: 5, tool_3_id: 18)
