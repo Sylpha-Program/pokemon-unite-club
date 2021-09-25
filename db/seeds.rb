@@ -158,7 +158,7 @@ Pokemon.order(id: :asc).each do |pokemon|
 end
 
 MySet.create(user_id: 1, pokemon_id: 1, r_skill_id: 2, zr_skill_id: 4, battle_item_id: 5, tool_1_id: 4, tool_2_id: 5, tool_3_id: 18)
-MySet.create(user_id: 1, pokemon_id: 2, r_skill_id: 6, zr_skill_id: 8, battle_item_id: 5, tool_1_id: 6, tool_2_id: 7, tool_3_id: 2)
+MySet.create(user_id: 1, pokemon_id: 2, r_skill_id: 5, zr_skill_id: 7, battle_item_id: 5, tool_1_id: 6, tool_2_id: 7, tool_3_id: 2)
 MySet.create(user_id: 1, pokemon_id: 3, r_skill_id: 10, zr_skill_id: 12, battle_item_id: 5, tool_1_id: 6, tool_2_id: 7, tool_3_id: 12)
 MySet.create(user_id: 1, pokemon_id: 4, r_skill_id: 13, zr_skill_id: 16, battle_item_id: 5, tool_1_id: 4, tool_2_id: 5, tool_3_id: 18)
 MySet.create(user_id: 1, pokemon_id: 5, r_skill_id: 18, zr_skill_id: 20, battle_item_id: 5, tool_1_id: 4, tool_2_id: 5, tool_3_id: 18)
