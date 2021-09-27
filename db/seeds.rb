@@ -21,6 +21,7 @@ Pokemon.create(name: 'ゼラオラ', image: 'zeraora.png', attack_type: 0, role:
 Pokemon.create(name: 'エースバーン', image: 'cinderace.png', attack_type: 1, role: 0, attack_category: 0)
 Pokemon.create(name: 'ワタシラガ', image: 'eldegoss.png', attack_type: 1, role: 4, attack_category: 1)
 Pokemon.create(name: 'ウッウ', image: 'cramorant.png', attack_type: 1, role: 0, attack_category: 1)
+Pokemon.create(name: 'マンムー', image: 'mamoswine.png', attack_type: 0, role: 1, attack_category: 0)
 
 Stage.create(name: 'レモータスタジアム', image: 'remoat_stadium.jpg')
 Stage.create(name: 'ジーヴルシティ', image: 'shivre_city.jpg')
@@ -148,6 +149,10 @@ Skill.create(pokemon_id: 23, button: 0, name: 'なみのり', image: 'cramorant_
 Skill.create(pokemon_id: 23, button: 0, name: 'ダイビング', image: 'cramorant_skill_2.png', attack_category: 1, level: 6, cool_time: 1.5, attack_type: 'ムーブ')
 Skill.create(pokemon_id: 23, button: 1, name: 'ぼうふう', image: 'cramorant_skill_3.png', attack_category: 1, level: 4, cool_time: 9, attack_type: '遠隔')
 Skill.create(pokemon_id: 23, button: 1, name: 'エアスラッシュ', image: 'cramorant_skill_4.png', attack_category: 1, level: 4, cool_time: 5, attack_type: '遠隔')
+Skill.create(pokemon_id: 24, button: 0, name: 'つららおとし', image: 'mamoswine_skill_1.png', attack_category: 0, level: 6, cool_time: 8, attack_type: '妨害')
+Skill.create(pokemon_id: 24, button: 0, name: 'こおりのキバ', image: 'mamoswine_skill_2.png', attack_category: 0, level: 6, cool_time: 8, attack_type: '妨害')
+Skill.create(pokemon_id: 24, button: 1, name: 'つららおとし', image: 'mamoswine_skill_3.png', attack_category: 0, level: 8, cool_time: 8, attack_type: 'ムーブ')
+Skill.create(pokemon_id: 24, button: 1, name: 'つららおとし', image: 'mamoswine_skill_4.png', attack_category: 0, level: 8, cool_time: 7.5, attack_type: 'ムーブ')
 
 User.create(name: 'Sylpha', email: 'sylpha.games@gmail.com', password: 'sayumi729864')
 
@@ -180,3 +185,4 @@ MySet.create(user_id: 1, pokemon_id: 20, r_skill_id: 77, zr_skill_id: 79, battle
 MySet.create(user_id: 1, pokemon_id: 21, r_skill_id: 81, zr_skill_id: 84, battle_item_id: 5, tool_1_id: 6, tool_2_id: 7, tool_3_id: 2)
 MySet.create(user_id: 1, pokemon_id: 22, r_skill_id: 86, zr_skill_id: 87, battle_item_id: 5, tool_1_id: 6, tool_2_id: 7, tool_3_id: 12)
 MySet.create(user_id: 1, pokemon_id: 23, r_skill_id: 89, zr_skill_id: 91, battle_item_id: 5, tool_1_id: 4, tool_2_id: 5, tool_3_id: 18)
+MySet.create(user_id: 1, pokemon_id: 24, r_skill_id: 94, zr_skill_id: 96, battle_item_id: 5, tool_1_id: 6, tool_2_id: 7, tool_3_id: 12)
