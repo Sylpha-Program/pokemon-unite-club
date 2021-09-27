@@ -6,7 +6,7 @@
 </div>
 <div class="row my-5">
   <div class="offset-xl-4 col-xl-4 offset-md-3 col-md-6">
-    <%= form_with(url: "/pokemons/#{@pokemon.id}/skill", local: true) do |f| %>
+    <%= form_with(url: "/pokemons/#{@pokemon.id}/skill_update", local: true) do |f| %>
       <div class="form-group">
         <%= f.label :skill, 'スキル' %>
         <%= f.collection_select(:skill_id, @skills, :id, :name, {prompt: "選択してください"}, {class: 'form-control'}) %>

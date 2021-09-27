@@ -12,9 +12,11 @@ Rails.application.routes.draw do
   post 'pokemons/random', to: 'pokemons#random'
   get 'pokemons/:id/score', to: 'pokemons#score_edit'
   post 'pokemons/:id/score', to: 'pokemons#score_update'
-  get 'pokemons/:id/skill', to: 'pokemons#skill_edit'
-  post 'pokemons/:id/skill', to: 'pokemons#skill_update'
-  resources :pokemons, only: [:index, :show]
+  get 'pokemons/:id/skill_new', to: 'pokemons#skill_new'
+  post 'pokemons/:id/skill_create', to: 'pokemons#skill_create'
+  get 'pokemons/:id/skill_edit', to: 'pokemons#skill_edit'
+  post 'pokemons/:id/skill_update', to: 'pokemons#skill_update'
+  resources :pokemons, only: [:index, :show, :new, :create]
 
   resources :stages, only: [:index, :show]
 

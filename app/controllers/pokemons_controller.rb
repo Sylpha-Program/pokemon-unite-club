@@ -17,6 +17,25 @@ class PokemonsController < ApplicationController
     end
   end
 
+  def new
+    @pokemon = Pokemon.new
+  end
+
+  def create
+    @pokemon = Pokemon.new(pokemon_params)
+    if @pokemon.save
+      Stage.order(id: :asc).each do |stage|
+        Score.create(user_id: session[:user_id], pokemon_id: @pokemon.id, stage_id: stage.id)
+      end
+      MySet.create(user_id: session[:user_id], pokemon_id: @pokemon.id)
+      flash[:success] = '登録しました。'
+      redirect_to root_url
+    else
+      flash.now[:danger] = '登録に失敗しました。'
+      render :new
+    end
+  end
+
   def random
     rand = Rails.env.production? ? "RANDOM()" : "rand()"
     @pokemon = Pokemon.order(rand).first
@@ -46,6 +65,22 @@ class PokemonsController < ApplicationController
     redirect_to root_url
   end
 
+  def skill_new
+    @pokemon = Pokemon.find(params[:id])
+    @skill = Skill.new
+  end
+
+  def skill_create
+    @skill = Skill.new(pokemon_id: params[:id], name: params[:name], image: params[:image], button: params[:button], attack_category: params[:attack_category], level: params[:level], cool_time: params[:cool_time], attack_type: params[:attack_type])
+    if @skill.save
+      flash[:success] = '登録しました。'
+      redirect_to root_url
+    else
+      flash.now[:danger] = '登録に失敗しました。'
+      render :skill_edit
+    end
+  end
+
   def skill_edit
     @pokemon = Pokemon.find(params[:id])
     @skills = Skill.where(pokemon_id: params[:id])
@@ -60,6 +95,12 @@ class PokemonsController < ApplicationController
       flash.now[:danger] = '更新に失敗しました。'
       render :skill_edit
     end
+  end
+
+  private
+
+  def pokemon_params
+    params.require(:pokemon).permit(:name, :image, :attack_type, :role, :attack_category)
   end
 
 end

@@ -1,0 +1,31 @@
+<div class="text-center">
+  <h1>ポケモン新規登録</h1>
+</div>
+<div class="row my-5">
+  <div class="offset-sm-3 col-sm-6">
+    <%= form_with(model: @pokemon, local: true) do |f| %>
+      <%= render 'layouts/error_messages', model: f.object %>
+      <div class="form-group">
+        <%= f.label :name, '名前' %>
+        <%= f.text_field :name, class: 'form-control' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :image, '画像' %>
+        <%= f.text_field :image, class: 'form-control' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :attack_type, '攻撃タイプ' %>
+        <%= f.select :attack_type, {'近接': '近接', '遠隔': '遠隔'}, {prompt: '選択してください'}, {class: 'form-control'} %>
+      </div>
+      <div class="form-group">
+        <%= f.label :role, '役割' %>
+        <%= f.select :role, {'アタック型': 'アタック型', 'ディフェンス型': 'ディフェンス型', 'スピード型': 'スピード型', 'バランス型': 'バランス型', 'サポート型': 'サポート型'}, {prompt: '選択してください'}, {class: 'form-control'} %>
+      </div>
+      <div class="form-group">
+        <%= f.label :attack_category, '攻撃／特攻' %>
+        <%= f.select :attack_category, {'攻撃': '攻撃', '特攻': '特攻'}, {prompt: '選択してください'}, {class: 'form-control'} %>
+      </div>
+      <%= f.submit '登録する', class: 'btn btn-primary btn-block mt-5' %>
+    <% end %>
+  </div>
+</div>
