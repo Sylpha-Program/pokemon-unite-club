@@ -149,10 +149,10 @@ Skill.create(pokemon_id: 23, button: 0, name: 'なみのり', image: 'cramorant_
 Skill.create(pokemon_id: 23, button: 0, name: 'ダイビング', image: 'cramorant_skill_2.png', attack_category: 1, level: 6, cool_time: 1.5, attack_type: 'ムーブ')
 Skill.create(pokemon_id: 23, button: 1, name: 'ぼうふう', image: 'cramorant_skill_3.png', attack_category: 1, level: 4, cool_time: 9, attack_type: '遠隔')
 Skill.create(pokemon_id: 23, button: 1, name: 'エアスラッシュ', image: 'cramorant_skill_4.png', attack_category: 1, level: 4, cool_time: 5, attack_type: '遠隔')
-Skill.create(pokemon_id: 24, button: 0, name: 'つららおとし', image: 'mamoswine_skill_1.png', attack_category: 0, level: 6, cool_time: 8, attack_type: '妨害')
+Skill.create(pokemon_id: 24, button: 0, name: 'つららおとし', image: 'mamoswine_skill_1.png', attack_category: 0, level: 6, cool_time: 10, attack_type: '妨害')
 Skill.create(pokemon_id: 24, button: 0, name: 'こおりのキバ', image: 'mamoswine_skill_2.png', attack_category: 0, level: 6, cool_time: 8, attack_type: '妨害')
-Skill.create(pokemon_id: 24, button: 1, name: 'つららおとし', image: 'mamoswine_skill_3.png', attack_category: 0, level: 8, cool_time: 8, attack_type: 'ムーブ')
-Skill.create(pokemon_id: 24, button: 1, name: 'つららおとし', image: 'mamoswine_skill_4.png', attack_category: 0, level: 8, cool_time: 7.5, attack_type: 'ムーブ')
+Skill.create(pokemon_id: 24, button: 1, name: '10まんばりき', image: 'mamoswine_skill_3.png', attack_category: 0, level: 8, cool_time: 8, attack_type: 'ムーブ')
+Skill.create(pokemon_id: 24, button: 1, name: 'じしん', image: 'mamoswine_skill_4.png', attack_category: 0, level: 8, cool_time: 7.5, attack_type: 'ムーブ')
 
 User.create(name: 'Sylpha', email: 'sylpha.games@gmail.com', password: 'sayumi729864')
 
