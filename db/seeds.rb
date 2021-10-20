@@ -23,6 +23,7 @@ Pokemon.create(name: 'ワタシラガ', image: 'eldegoss.png', attack_type: 1, r
 Pokemon.create(name: 'ウッウ', image: 'cramorant.png', attack_type: 1, role: 0, attack_category: 1)
 Pokemon.create(name: 'マンムー', image: 'mamoswine.png', attack_type: 0, role: 1, attack_category: 0)
 Pokemon.create(name: 'ニンフィア', image: 'sylveon.png', attack_type: 1, role: 0, attack_category: 1)
+Pokemon.create(name: 'ヨクバリス', image: 'greedent.png', attack_type: 0, role: 1, attack_category: 0)
 
 Stage.create(name: 'レモータスタジアム', image: 'remoat_stadium.jpg')
 Stage.create(name: 'ジーヴルシティ', image: 'shivre_city.jpg')
@@ -67,7 +68,7 @@ Skill.create(pokemon_id: 2, button: 0, name: 'ほのおのパンチ', image: 'ch
 Skill.create(pokemon_id: 2, button: 1, name: 'だいもんじ', image: 'charizard_skill_3.png', attack_category: 0, level: 7, cool_time: 6.5, attack_type: '範囲')
 Skill.create(pokemon_id: 2, button: 1, name: 'フレアドライブ', image: 'charizard_skill_4.png', attack_category: 0, level: 7, cool_time: 10, attack_type: '必中')
 Skill.create(pokemon_id: 3, button: 0, name: 'ハイドロポンプ', image: 'blastoise_skill_1.png', attack_category: 1, level: 5, cool_time: 8.5, attack_type: '遠隔')
-Skill.create(pokemon_id: 3, button: 0, name: 'しおふき', image: 'blastoise_skill_2.png', attack_category: 1, level: 5, cool_time: 9, attack_type: '範囲')
+Skill.create(pokemon_id: 3, button: 0, name: 'しおふき', image: 'blastoise_skill_2.png', attack_category: 1, level: 5, cool_time: 7.5, attack_type: '範囲')
 Skill.create(pokemon_id: 3, button: 1, name: 'なみのり', image: 'blastoise_skill_3.png', attack_category: 1, level: 7, cool_time: 12, attack_type: 'ムーブ')
 Skill.create(pokemon_id: 3, button: 1, name: 'こうそくスピン', image: 'blastoise_skill_4.png', attack_category: 1, level: 7, cool_time: 11, attack_type: '範囲')
 Skill.create(pokemon_id: 4, button: 0, name: 'エレキボール', image: 'pikachu_skill_1.png', attack_category: 1, level: 4, cool_time: 5, attack_type: '必中')
@@ -88,7 +89,7 @@ Skill.create(pokemon_id: 7, button: 1, name: 'ばくれつパンチ', image: 'ma
 Skill.create(pokemon_id: 7, button: 1, name: 'じごくぐるま', image: 'machamp_skill_4.png', attack_category: 0, level: 5, cool_time: 11, attack_type: '能力上昇')
 Skill.create(pokemon_id: 8, button: 0, name: 'ねっとう', image: 'slowbro_skill_1.png', attack_category: 1, level: 4, cool_time: 5, attack_type: '遠隔')
 Skill.create(pokemon_id: 8, button: 0, name: 'なみのり', image: 'slowbro_skill_2.png', attack_category: 1, level: 4, cool_time: 9, attack_type: '妨害')
-Skill.create(pokemon_id: 8, button: 1, name: 'ドわすれ', image: 'slowbro_skill_3.png', attack_category: 2, level: 6, cool_time: 13, attack_type: '回復')
+Skill.create(pokemon_id: 8, button: 1, name: 'ドわすれ', image: 'slowbro_skill_3.png', attack_category: 2, level: 6, cool_time: 9, attack_type: '回復')
 Skill.create(pokemon_id: 8, button: 1, name: 'テレキネシス', image: 'slowbro_skill_4.png', attack_category: 2, level: 6, cool_time: 11, attack_type: '妨害')
 Skill.create(pokemon_id: 9, button: 0, name: 'シャドーボール', image: 'gengar_skill_1.png', attack_category: 1, level: 5, cool_time: 4.5, attack_type: '遠隔')
 Skill.create(pokemon_id: 9, button: 0, name: 'ヘドロばくだん', image: 'gengar_skill_2.png', attack_category: 1, level: 5, cool_time: 8, attack_type: '範囲')
@@ -158,6 +159,10 @@ Skill.create(pokemon_id: 25, button: 0, name: 'マジカルフレイム', image:
 Skill.create(pokemon_id: 25, button: 0, name: 'ハイパーボイス', image: 'sylveon_skill_2.png', attack_category: 1, level: 4, cool_time: 5, attack_type: '範囲')
 Skill.create(pokemon_id: 25, button: 1, name: 'ドレインキッス', image: 'sylveon_skill_3.png', attack_category: 1, level: 6, cool_time: 10, attack_type: '必中')
 Skill.create(pokemon_id: 25, button: 1, name: 'めいそう', image: 'sylveon_skill_4.png', attack_category: 2, level: 6, cool_time: 10, attack_type: '能力上昇')
+Skill.create(pokemon_id: 26, button: 0, name: 'タネマシンガン', image: 'greedent_skill_1.png', attack_category: 0, level: 7, cool_time: 5, attack_type: '遠隔')
+Skill.create(pokemon_id: 26, button: 0, name: 'ゲップ', image: 'greedent_skill_2.png', attack_category: 0, level: 7, cool_time: 5, attack_type: '遠隔')
+Skill.create(pokemon_id: 26, button: 1, name: 'ほおばる', image: 'greedent_skill_3.png', attack_category: 2, level: 5, cool_time: 8, attack_type: '能力上昇')
+Skill.create(pokemon_id: 26, button: 1, name: 'ほしがる', image: 'greedent_skill_4.png', attack_category: 0, level: 5, cool_time: 9, attack_type: '妨害')
 
 User.create(name: 'Sylpha', email: 'sylpha.games@gmail.com', password: 'sayumi729864')
 
@@ -192,3 +197,4 @@ MySet.create(user_id: 1, pokemon_id: 22, r_skill_id: 86, zr_skill_id: 87, battle
 MySet.create(user_id: 1, pokemon_id: 23, r_skill_id: 89, zr_skill_id: 91, battle_item_id: 5, tool_1_id: 5, tool_2_id: 10, tool_3_id: 2)
 MySet.create(user_id: 1, pokemon_id: 24, r_skill_id: 93, zr_skill_id: 95, battle_item_id: 5, tool_1_id: 5, tool_2_id: 11, tool_3_id: 6)
 MySet.create(user_id: 1, pokemon_id: 25, r_skill_id: 98, zr_skill_id: 100, battle_item_id: 5, tool_1_id: 5, tool_2_id: 10, tool_3_id: 2)
+MySet.create(user_id: 1, pokemon_id: 26, r_skill_id: 102, zr_skill_id: 103, battle_item_id: 5, tool_1_id: 5, tool_2_id: 11, tool_3_id: 6)
