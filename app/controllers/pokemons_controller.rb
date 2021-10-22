@@ -40,10 +40,6 @@ class PokemonsController < ApplicationController
     rand = Rails.env.production? ? "RANDOM()" : "rand()"
     @pokemon = Pokemon.order(rand).first
     session[:pokemon_id] = @pokemon.id
-    @score = Score.find_by(user_id: 1, pokemon_id: 4, stage_id: 4)
-    @score.total_point = 60
-    @score.max_point = 60
-    @score.save
     redirect_to root_url
   end
 
