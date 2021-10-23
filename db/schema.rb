@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_19_091246) do
+ActiveRecord::Schema.define(version: 2021_10_23_035445) do
 
   create_table "battle_items", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
@@ -38,6 +38,19 @@ ActiveRecord::Schema.define(version: 2021_09_19_091246) do
     t.index ["tool_3_id"], name: "index_my_sets_on_tool_3_id"
     t.index ["user_id"], name: "index_my_sets_on_user_id"
     t.index ["zr_skill_id"], name: "index_my_sets_on_zr_skill_id"
+  end
+
+  create_table "offlines", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "pokemon_id"
+    t.bigint "stage_id"
+    t.integer "total_point", default: 0
+    t.integer "max_point", default: 0
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["pokemon_id"], name: "index_offlines_on_pokemon_id"
+    t.index ["stage_id"], name: "index_offlines_on_stage_id"
+    t.index ["user_id"], name: "index_offlines_on_user_id"
   end
 
   create_table "pokemons", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -107,6 +120,9 @@ ActiveRecord::Schema.define(version: 2021_09_19_091246) do
   add_foreign_key "my_sets", "tools", column: "tool_2_id"
   add_foreign_key "my_sets", "tools", column: "tool_3_id"
   add_foreign_key "my_sets", "users"
+  add_foreign_key "offlines", "pokemons"
+  add_foreign_key "offlines", "stages"
+  add_foreign_key "offlines", "users"
   add_foreign_key "scores", "pokemons"
   add_foreign_key "scores", "stages"
   add_foreign_key "scores", "users"

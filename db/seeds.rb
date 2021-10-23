@@ -169,6 +169,7 @@ User.create(name: 'Sylpha', email: 'sylpha.games@gmail.com', password: 'sayumi72
 Pokemon.order(id: :asc).each do |pokemon|
   Stage.order(id: :asc).each do |stage|
     Score.create(user_id: 1, pokemon_id: pokemon.id, stage_id: stage.id)
+    Offline.create(user_id: 1, pokemon_id: pokemon.id, stage_id: stage.id)
   end
 end
 
@@ -197,4 +198,4 @@ MySet.create(user_id: 1, pokemon_id: 22, r_skill_id: 86, zr_skill_id: 87, battle
 MySet.create(user_id: 1, pokemon_id: 23, r_skill_id: 89, zr_skill_id: 91, battle_item_id: 5, tool_1_id: 5, tool_2_id: 10, tool_3_id: 2)
 MySet.create(user_id: 1, pokemon_id: 24, r_skill_id: 93, zr_skill_id: 95, battle_item_id: 5, tool_1_id: 5, tool_2_id: 11, tool_3_id: 6)
 MySet.create(user_id: 1, pokemon_id: 25, r_skill_id: 98, zr_skill_id: 100, battle_item_id: 5, tool_1_id: 5, tool_2_id: 10, tool_3_id: 2)
-MySet.create(user_id: 1, pokemon_id: 26, r_skill_id: 102, zr_skill_id: 103, battle_item_id: 5, tool_1_id: 5, tool_2_id: 11, tool_3_id: 6)
+MySet.create(user_id: 1, pokemon_id: 26, r_skill_id: 102, zr_skill_id: 104, battle_item_id: 5, tool_1_id: 5, tool_2_id: 11, tool_3_id: 6)

@@ -25,5 +25,9 @@ Rails.application.routes.draw do
   resources :tools, only: [:index]
 
   resources :my_sets, only: [:index, :edit, :update]
+
+  get 'offlines/score', to: 'offlines#score_edit'
+  post 'offlines/score', to: 'offlines#score_update'
+  get 'offlines', to: 'offlines#show'
   
 end
