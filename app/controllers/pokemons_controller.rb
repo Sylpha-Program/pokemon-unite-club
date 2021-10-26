@@ -57,7 +57,13 @@ class PokemonsController < ApplicationController
     @score.save
     @current_level = Math.sqrt((Score.where(user_id: session[:user_id], pokemon_id: params[:id]).sum(:total_point)) / 10).floor
     if @current_level > @previous_level
-      flash[:success] = "#{@score.pokemon.name}のレベルが#{@current_level}に上がりました"
+      msg = "ポケモン：#{@score.pokemon.name},ステージ：#{@score.stage.name},スコア：#{params[:point].to_i}（過去最高：#{@score.max_point}）,レベル：Lv.#{@previous_level}→Lv.#{@current_level}"
+      msg = msg.gsub(",","<br>")
+      flash[:success] = msg
+    else
+      msg = "ポケモン：#{@score.pokemon.name},ステージ：#{@score.stage.name},スコア：#{params[:point].to_i}（過去最高：#{@score.max_point}）"
+      msg = msg.gsub(",","<br>")
+      flash[:success] = msg
     end
     if params[:point].to_i > @score.max_point
       @score.update(max_point: params[:point])
