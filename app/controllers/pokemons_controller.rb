@@ -2,27 +2,27 @@ class PokemonsController < ApplicationController
 
   def index
     @pokemons = Pokemon.order(id: :asc)
-    @offline = Offline.find(user_id: session[:user_id], pokemon_id: 1, stage_id: 1)
+    @offline = Offline.find_by(user_id: session[:user_id], pokemon_id: 1, stage_id: 1)
     @offline.max_point = 0
     @offline.total_point = 0
     @offline.save
-    @offline = Offline.find(user_id: session[:user_id], pokemon_id: 2, stage_id: 1)
+    @offline = Offline.find_by(user_id: session[:user_id], pokemon_id: 2, stage_id: 1)
     @offline.max_point = 0
     @offline.total_point = 0
     @offline.save
-    @offline = Offline.find(user_id: session[:user_id], pokemon_id: 3, stage_id: 1)
+    @offline = Offline.find_by(user_id: session[:user_id], pokemon_id: 3, stage_id: 1)
     @offline.max_point = 0
     @offline.total_point = 0
     @offline.save
-    @offline = Offline.find(user_id: session[:user_id], pokemon_id: 4, stage_id: 1)
+    @offline = Offline.find_by(user_id: session[:user_id], pokemon_id: 4, stage_id: 1)
     @offline.max_point = 0
     @offline.total_point = 0
     @offline.save
-    @offline = Offline.find(user_id: session[:user_id], pokemon_id: 5, stage_id: 1)
+    @offline = Offline.find_by(user_id: session[:user_id], pokemon_id: 5, stage_id: 1)
     @offline.max_point = 0
     @offline.total_point = 0
     @offline.save
-    @offline = Offline.find(user_id: session[:user_id], pokemon_id: 6, stage_id: 1)
+    @offline = Offline.find_by(user_id: session[:user_id], pokemon_id: 6, stage_id: 1)
     @offline.max_point = 0
     @offline.total_point = 0
     @offline.save
