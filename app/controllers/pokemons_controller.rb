@@ -2,6 +2,9 @@ class PokemonsController < ApplicationController
 
   def index
     @pokemons = Pokemon.order(id: :asc)
+    @offline = Offline.find_by(user_id: session[:user_id], pokemon_id: 24, stage_id: 1)
+    @offline.total_point = 30
+    @offline.save
   end
 
   def show
