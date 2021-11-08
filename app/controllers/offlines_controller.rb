@@ -11,10 +11,11 @@ class OfflinesController < ApplicationController
 
   def score_update
     @score = Offline.find_by(user_id: session[:user_id], pokemon_id: params[:pokemon_id], stage_id: 1)
-    @score.total_point += params[:point].to_i
+    @point = params[:own_point].to_i - params[:enemy_point].to_i
+    @score.total_point += @point
     @score.save
-    if params[:point].to_i > @score.max_point
-      @score.update(max_point: params[:point])
+    if @point > @score.max_point
+      @score.update(max_point: @point)
     end
     redirect_to "/offlines"
   end
