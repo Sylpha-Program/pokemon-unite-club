@@ -14,7 +14,7 @@ class OfflinesController < ApplicationController
     @point = params[:own_point].to_i - params[:enemy_point].to_i
     @score.total_point += @point
     @score.save
-    msg = "ポケモン：#{@score.pokemon.name},ステージ：#{@score.stage.name},スコア：#{@point}（過去最高：#{@score.max_point}）"
+    msg = "ポケモン：#{@score.pokemon.name},スコア：#{@point}（過去最高：#{@score.max_point}）"
     msg = msg.gsub(",","<br>")
     flash[:success] = msg
     if @point > @score.max_point
